@@ -25,7 +25,15 @@
  * Return value:  how many digit in this num
  */
 int find(int num, int digit) {
-#error TODO: Fix this exercise. Run "clings hint" for help.
+//#error TODO: Fix this exercise. Run "clings hint" for help.
+    int counter = 0;
+    do{
+        if(num % 10 == digit){
+            counter++;
+        }
+        num /= 10;
+    }while(num != 0);
+    return counter;
 }
 
 int main(void) {
